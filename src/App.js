@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Title, Divider, ProjectList } from './components'
+import { AppHeader, Title, Divider, ProjectList } from './components'
 import './App.css';
 
 const currentProjectsArray = ["mott-survey", "hush-os", "white-label"]
@@ -8,10 +8,10 @@ const futureProjectsArray = ["fox", "aa", "national-express"]
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div>
+        <AppHeader>
           <Title />
-        </header>
+        </AppHeader>
         <h2>Current Projects</h2>
         <ProjectList projects={currentProjectsArray} />
         <Divider />

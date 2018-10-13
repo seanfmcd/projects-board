@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { AppHeader, Title, Divider, ProjectList } from './components'
+import React, { Component, Fragment } from 'react';
+import { AppHeader, Title, Divider, ProjectList, H2 } from './components'
 import './App.css';
 
 const currentProjectsArray = ["mott-survey", "hush-os", "white-label"]
@@ -8,20 +8,23 @@ const futureProjectsArray = ["fox", "aa", "national-express"]
 class App extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <AppHeader>
           <Title />
         </AppHeader>
-        <h2>Current Projects</h2>
+
+        <H2>Current Projects</H2>
         <ProjectList projects={currentProjectsArray} />
         <Divider />
-        <h2>Past Projects</h2>
+
+        <H2>Past Projects</H2>
         <ProjectList projects={pastProjectsArray} />
         <Divider />
-        <h2>Future Projects</h2>
+
+        <H2>Future Projects</H2>
         <ProjectList projects={futureProjectsArray} />
         <Divider />
-      </div>
+      </Fragment>
     );
   }
 }

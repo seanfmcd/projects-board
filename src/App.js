@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Title, Divider, ProjectList } from './components'
 import './App.css';
 
+const currentProjectsArray = ["mott-survey", "hush-os", "white-label"]
+const pastProjectsArray = ["warhol", "sitematch", "rise-gallery"]
+const futureProjectsArray = ["fox", "aa", "national-express"]
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <Title />
         </header>
+        <h2>Current Projects</h2>
+        <ProjectList projects={currentProjectsArray} />
+        <Divider />
+        <h2>Past Projects</h2>
+        <ProjectList projects={pastProjectsArray} />
+        <Divider />
+        <h2>Future Projects</h2>
+        <ProjectList projects={futureProjectsArray} />
+        <Divider />
       </div>
     );
   }

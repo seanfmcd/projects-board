@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
-import { AppHeader, Title, Divider, ProjectList, H2 } from './components'
-import './App.css';
+import React, { Component, Fragment } from "react";
+import { AppHeader, Title, Divider, ProjectList, H2 } from "./components";
+import "./App.css";
 
-const currentProjectsArray = ["mott-survey", "hush-os", "white-label"]
-const pastProjectsArray = ["warhol", "sitematch", "rise-gallery"]
-const futureProjectsArray = ["fox", "aa", "national-express"]
+const currentProjectsArray = ["mott-survey", "hush-os", "white-label"];
+const pastProjectsArray = ["warhol", "sitematch", "rise-gallery"];
+const futureProjectsArray = ["fox", "aa", "national-express"];
 class App extends Component {
   render() {
     return (

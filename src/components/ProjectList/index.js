@@ -1,13 +1,15 @@
-import React from 'react'
-import StyledList from '../StyledList'
-import StyledListItem from '../StyledListItem'
+import React from "react";
+import StyledList from "../StyledList";
+import StyledListItem from "../StyledListItem";
 
-const ProjectList = ({ projects }) => (
+const ProjectList = ({ projects, click }) => (
   <StyledList>
     {projects.map(project => (
-      <StyledListItem key={project} >{project}</StyledListItem>
+      <StyledListItem onClick={click} key={project}>
+        {project}
+      </StyledListItem>
     ))}
   </StyledList>
-)
+);
 
-export default ProjectList
+export default ProjectList;
